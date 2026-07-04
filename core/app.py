@@ -1,28 +1,20 @@
 """
-Application bootstrap for LineForge AI.
+Application bootstrap.
 """
 
 import sys
 
-from PySide6.QtWidgets import QApplication, QMainWindow
+from PySide6.QtWidgets import QApplication
 
-
-class MainWindow(QMainWindow):
-    """Main application window."""
-
-    def __init__(self):
-        super().__init__()
-
-        self.setWindowTitle("LineForge AI")
-        self.resize(1400, 900)
+from ui.main_window import MainWindow
 
 
 def run():
-    """Start the application."""
 
     app = QApplication(sys.argv)
 
     window = MainWindow()
+
     window.show()
 
     sys.exit(app.exec())
